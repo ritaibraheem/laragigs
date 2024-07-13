@@ -10,10 +10,6 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/hello', function () {
-    return 'Hello World';
-});
-
 Route::get('/listings/{id}', function ($id) {
     return view('listing', [
         'listing' => Listing::find($id)
